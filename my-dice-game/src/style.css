@@ -1,0 +1,249 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: gold;
+    background-color: #222;
+    text-align: center;
+    padding: 20px;
+    font-style: oblique;
+    font-size: 1.2rem;
+}
+
+.game-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+section {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  min-height: 200px;
+}
+
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+
+
+#logSection {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  border-left: 2px solid gold;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+#gameLog {
+  flex: 1;
+  max-height: 70vh;
+  overflow-y: auto;
+  text-align: left;
+  font-size: 1rem;
+  color: gold;
+  line-height: 1.4;
+  scrollbar-width: thin;
+}
+
+
+#gameLog::-webkit-scrollbar {
+  width: 20px;
+}
+
+#gameLog::-webkit-scrollbar-track {
+  background-color: purple;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+#gameLog::-webkit-scrollbar-thumb {
+  background: gold;
+  border-radius: 4px;
+}
+
+
+#rollSection button:hover::after {
+  content: " 🎲 Roll!";
+  color: blueviolet;
+  font-weight: bold;
+  margin-left: 10px;
+  display: inline;
+  animation: glow 1s infinite alternate, fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-5px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+
+@keyframes glow {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+
+.player {
+  background-color: #444;
+  padding: 10px;
+  border-radius: 6px;
+  flex: 1;
+}
+
+
+footer {
+  grid-column: 1 / -1;
+  color: skyblue;
+  font-style: italic;
+  margin-top: 20px;
+  text-shadow: 0 0 5px #888;
+  transition: all 0.3s ease;
+}
+
+footer:hover {
+  color: gold;
+  text-shadow: 0 0 5px #888;
+  transform: scale(1.05);
+  animation: footerGlow 1.5s infinite alternate;
+}
+
+@keyframes footerGlow {
+  from { text-shadow: 0 0 10px gold;}
+  to { text-shadow: 0 0 25px orange;}
+} 
+
+@media (max-width: 900px) {
+  .dice-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #betSection {
+  flex-direction:  column;
+  align-items: center;
+ }
+}
+
+@media (max-width: 600px) {
+  body {
+    grid-template-columns: 1fr;
+    font-size: 1rem; 
+  }
+}
+
+#rollSection button {
+  background: linear-gradient(145deg, #444, #222);
+  color: gold;
+  font-weight: bold;
+  border: 2px solid gold;
+  border-radius: 10px;
+  padding: 12px 24px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6), inset 0 0 5px #000;
+  transition: all 0.3s ease;
+}
+
+#rollSection button:hover {
+  background: linear-gradient(145deg, #555, #333);
+  color: blueviolet;
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.8), inset 0 0 8px #000;
+  transform: scale(1.05);
+}
+
+#rollSection button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.6), inset 0 0 10px #000;
+}
+
+
+
+#bankSection button {
+  background: linear-gradient(145deg, #444, #222);
+  color: gold;
+  font-weight: bold;
+  border: 2px solid gold;
+  border-radius: 10px;
+  padding: 12px 24px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6), inset 0 0 5px #000;
+  transition: all 0.3s ease;
+}
+
+#bankSection button:hover {
+  background: linear-gradient(145deg, #555, #333);
+  color: blueviolet;
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.8), inset 0 0 8px #000;
+  transform: scale(1.05);
+}
+
+#bankSection button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.6), inset 0 0 10px #000;
+}
+
+#betSection button {
+  background: linear-gradient(145deg, #444, #222);
+  color: gold;
+  font-weight: bold;
+  border: 2px solid gold;
+  border-radius: 10px;
+  padding: 12px 24px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6), inset 0 0 5px #000;
+  transition: all 0.3s ease;
+}
+
+#betSection button:hover {
+  background: linear-gradient(145deg, #555, #333);
+  color: blueviolet;
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.8), inset 0 0 8px #000;
+  transform: scale(1.05);
+}
+
+#betSection button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.6), inset 0 0 10px #000;
+}
+
+.dice-container img {
+  transition: transform 0.3s ease;
+}
+
+.dice-container img.roll {
+  animation: shake 0.5s ease-in-out;
+  box-shadow: 0 0 10px gold;
+}
+
+@keyframes shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+.win {
+  color: limegreen;
+  text-shadow: 0 0 15px limegreen;
+  animation: flush 1s ease-in-out;
+}
+
+.lose {
+  color: crimson;
+  text-shadow: 0 0 15px crimson;
+  animation: flash 1s ease-in-out;
+}
+
+@keyframes flash {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
