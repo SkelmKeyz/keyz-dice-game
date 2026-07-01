@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  min-height: 100vh;
+  color: #f8fafc;
+}
+
+.App-main {
+  padding: 2rem;
+}
+
+.App-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 2rem; /* spacing between cards */
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.dice-card { grid-area: dice; }
+.bank-card { grid-area: bank; }
+.balance-card { grid-area: balance; }
+.pot-card { grid-area: pot; }
+.sidebets-card { grid-area: sidebets; }
+.controls-card { grid-area: controls; }
+.gamelog-card { grid-area: gamelog; }
+
+.section-card {
+  background: rgba(30, 41, 59, 0.8);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(102, 252, 241, 0.5);
+}
+
+.dice-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+

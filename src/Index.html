@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skelm Keyz Dice Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Keyz Dice Games</h1>
+  
+  <div class="game-wrapper">
+    <div class="left-panel">
+      <section id="rollSection">
+        <h2>Roll Dice!</h2>
+        <button onclick="handClick()">Roll Dice</button>
+        <div class="dice-container">
+          <img class="img1" src="images/dice.png" alt="Die 1">
+          <img class="img2" src="images/dice.png" alt="Die 2">
+        </div>
+  </section>
+  
+  <section id="bankSection">
+    <h2>Central Bank</h2>
+    <p id="bankInfo">Loan Pool: R0</p>
+    <p id="potDisplay">Pot: R0</p>
+    <input type="number" id="loanAmount" min="0" value="20">
+    <button onclick="requestLoan('player1', document.getElementById('loanAmount').value)">Accept!</button>
+  </section>
+  
+  <section id="betSection">
+    <h2>Betting House</h2>
+    <div class="player">
+      <h3>Player 1</h3>
+      <p id="bankBalanceP1">Bank Balance: </p>
+      <input type="number" id="betAmount1" min="20" value="20">
+      <button onclick="placeBet('player1', document.getElementById('betAmount1').value)">Place Bet</button>
+      <button onclick="placeSideBet('player1', document.getElementById('betAmount1').value)">Special Bet</button>
+    </div>
+    <div class="player">
+    <h3>Player 2</h3>
+    <p id="bankBalanceP2">Bank Balance: </p>
+    <input type="number" id="betAmount2" min="20" value="20">
+    <button onclick="placeBet('player2', document.getElementById('betAmount2').value)">Place Bet</button>
+    <button onclick="placeSideBet('player2', document.getElementById('betAmount2').value)">Place Bet</button>
+    </div>
+</section>
+</div>
+  
+
+  <section id="logsection">
+  <h2>Game Log</h2>
+  <div id="gameLog">Game Log:</div> 
+  </section>
+
+</div>
+    <footer>
+        🎲 Skelm Keyz I'm just doing my thing!. 
+        @2026 Design By Skelm Keyz! 🎲
+
+    </footer>
+    <script src="javascript.js" defer></script>
+</body>
+</html>
